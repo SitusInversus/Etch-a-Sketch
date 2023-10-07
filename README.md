@@ -9,5 +9,8 @@ Requirements:
 
 Approach:
 
-    1. create index.html, etchASketch.js, etchAsketch.css
+    1. create index.html, etchASketch.js, etchASketch.css
     2. link script and stylesheet to index.html
+    3. Think about how to create a 16x16 grid of square divs and how to break the task down
+
+    
