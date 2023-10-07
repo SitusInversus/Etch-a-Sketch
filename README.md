@@ -9,5 +9,5 @@ Requirements:
 
 Approach:
 
-    1. create index.html, etchASketch.js, etachAsketch.css
+    1. create index.html, etchASketch.js, etchAsketch.css
     2. link script and stylesheet to index.html
