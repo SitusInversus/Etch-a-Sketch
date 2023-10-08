@@ -1,8 +1,12 @@
-const body = document.querySelector("body")
+let sizeGrid = 320;
+let numberGridElements = 16;
+let sizeGridElement = sizeGrid/numberGridElements;
 
+const body = document.querySelector("body")
 const containerGrid = document.createElement("div");
 
-let sizeGrid = 300;
+const containerGrid = document.createElement("div");
+body.appendChild(containerGrid);
 
 containerGrid.classList.add("containerGrid");
 containerGrid.style.width = `${sizeGrid}px`;
@@ -10,8 +14,7 @@ containerGrid.style.height = `${sizeGrid}px`;
 containerGrid.style.display = "flex";
 containerGrid.style.backgroundColor = "#7e8b003d";
 
-body.appendChild(containerGrid);
+const squareDiv = document.createElement("div");
+containerGrid.appendChild(squareDiv);
 
-let dimensionGrid = 16;
-
-const div = document.createElement("div");
+squareDiv.style.width = `${sizeGrid}/${dimension}`
