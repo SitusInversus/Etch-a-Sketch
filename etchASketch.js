@@ -1,6 +1,9 @@
 let sizeGrid = 320;
-let numberGridElements = 16;
-let sizeGridElement = sizeGrid/numberGridElements;
+let columnLength = 16;
+let numberGridElements = columnLength**2;
+let sizeGridElement = sizeGrid/columnLength;
+
+
 
 const body = document.querySelector("body")
 
@@ -12,11 +15,23 @@ containerGrid.style.width = `${sizeGrid}px`;
 containerGrid.style.height = `${sizeGrid}px`;
 containerGrid.style.display = "flex";
 containerGrid.style.backgroundColor = "#7e8b003d";
+containerGrid.style.boxSizing = "border-box";
+containerGrid.style.flexWrap = "wrap"
 
-const squareDiv = document.createElement("div");
-containerGrid.appendChild(squareDiv);
+for (let i = 0; i<numberGridElements; i++) {
+    const squareDivLoop = document.createElement("div");
+    squareDivLoop.classList.add("squareDiv");
+    containerGrid.appendChild(squareDivLoop);
+};
 
-squareDiv.classList.add("squareDiv");
-squareDiv.style.width = `${sizeGridElement}px`;
-squareDiv.style.height = `${sizeGridElement}px`;
-squareDiv.style.backgroundColor = "white";
+const squareDivs = document.querySelectorAll(".squareDiv");
+
+squareDivs.forEach(squareDiv => {
+    squareDiv.style.width = `${sizeGridElement}px`;
+    squareDiv.style.height = `${sizeGridElement}px`;
+    squareDiv.style.backgroundColor = "white";
+    squareDiv.style.backgroundColor = "red";
+    squareDiv.style.boxSizing = "border-box";
+    
+});
+
