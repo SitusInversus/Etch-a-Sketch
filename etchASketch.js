@@ -3,7 +3,6 @@ let numberGridElements = 16;
 let sizeGridElement = sizeGrid/numberGridElements;
 
 const body = document.querySelector("body")
-const containerGrid = document.createElement("div");
 
 const containerGrid = document.createElement("div");
 body.appendChild(containerGrid);
@@ -17,4 +16,7 @@ containerGrid.style.backgroundColor = "#7e8b003d";
 const squareDiv = document.createElement("div");
 containerGrid.appendChild(squareDiv);
 
-squareDiv.style.width = `${sizeGrid}/${dimension}`
+squareDiv.classList.add("squareDiv");
+squareDiv.style.width = `${sizeGridElement}px`;
+squareDiv.style.height = `${sizeGridElement}px`;
+squareDiv.style.backgroundColor = "white";
