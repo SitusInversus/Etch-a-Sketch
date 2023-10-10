@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color : grey;
+    border : 1px solid red;
+}
+
+.containerGrid {
+display : flex;
+background-color : #7e8b003d;
+box-sizing: border-box;
+flex-wrap:  wrap;
+align-self: center;
+}
+
+.squareDiv {
+    background-color : red;
+    box-sizing : border-box;
+}
