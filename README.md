@@ -23,4 +23,9 @@ Approach:
             - Header, Main Content contains Grid, Footer
             - 1 column layout
             - * { box-sizing: border-box; }
+
+    4. Setting up the hover effect
+
+            - use eventlistener : mouseenter"
+            - set up the class "colorme" with attribute: background-color: black
     

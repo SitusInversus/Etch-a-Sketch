@@ -23,8 +23,7 @@ for (let i = 0; i<numberGridElements; i++) {
 };
 
 const squareDivs = document.querySelectorAll(".squareDiv");
-containerGrid.classList.add("colorme");
-console.log(containerGrid.className);
+
 
 squareDivs.forEach(squareDiv => {
     squareDiv.style.width = `${sizeGridElement}px`;
@@ -32,11 +31,9 @@ squareDivs.forEach(squareDiv => {
     squareDiv.addEventListener('mouseenter', eventMouseEnter => {
         if (squareDiv.classList.contains("colorme")){
             //squareDiv.classList.remove("colorme");
-            console.log(this)
         }
         else {
             squareDiv.classList.add("colorme");
         }
-        console.log(eventMouseEnter)
     } );
 });
