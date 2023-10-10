@@ -6,6 +6,11 @@ let sizeGridElement = sizeGrid/columnLength;
 
 
 const body = document.querySelector("body")
+body.style.display = "flex";
+body.style.justifyContent = "center";
+body.style.backgroundColor = "grey";
+body.style.border = "1px solid red";
+body.style.flex = "stretch";
 
 const containerGrid = document.createElement("div");
 body.appendChild(containerGrid);
@@ -16,7 +21,8 @@ containerGrid.style.height = `${sizeGrid}px`;
 containerGrid.style.display = "flex";
 containerGrid.style.backgroundColor = "#7e8b003d";
 containerGrid.style.boxSizing = "border-box";
-containerGrid.style.flexWrap = "wrap"
+containerGrid.style.flexWrap = "wrap";
+containerGrid.style.alignSelf = "center";
 
 for (let i = 0; i<numberGridElements; i++) {
     const squareDivLoop = document.createElement("div");
