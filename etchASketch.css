@@ -6,14 +6,18 @@ body {
 }
 
 .containerGrid {
-display : flex;
-background-color : #7e8b003d;
-box-sizing: border-box;
-flex-wrap:  wrap;
-align-self: center;
+    display : flex;
+    background-color : #7e8b003d;
+    box-sizing: border-box;
+    flex-wrap:  wrap;
+    align-self: center;
 }
 
 .squareDiv {
     background-color : red;
     box-sizing : border-box;
+}
+
+.colorme {
+    background-color: black;
 }
