@@ -4,36 +4,48 @@ let numberGridElements = columnLength**2;
 let sizeGridElement = sizeGrid/columnLength;
 
 
+const gridContainer = document.querySelector(".gridContainer")
+const controls = document.querySelectorAll(".controls input") 
 
-const body = document.querySelector("body")
-
-
-const containerGrid = document.createElement("div");
-body.appendChild(containerGrid);
-
-containerGrid.classList.add("containerGrid");
-containerGrid.style.width = `${sizeGrid}px`;
-containerGrid.style.height = `${sizeGrid}px`;
-
-
-for (let i = 0; i<numberGridElements; i++) {
-    const squareDivLoop = document.createElement("div");
-    squareDivLoop.classList.add("squareDiv");
-    containerGrid.appendChild(squareDivLoop);
+function handleUpdate() {
+    removeDiv();
+    createDiv (document.querySelector("#gridSize").value);
 };
 
-const squareDivs = document.querySelectorAll(".squareDiv");
-
-
-squareDivs.forEach(squareDiv => {
-    squareDiv.style.width = `${sizeGridElement}px`;
-    squareDiv.style.height = `${sizeGridElement}px`;
-    squareDiv.addEventListener('mouseenter', eventMouseEnter => {
-        if (squareDiv.classList.contains("colorme")){
-            //squareDiv.classList.remove("colorme");
-        }
-        else {
-            squareDiv.classList.add("colorme");
-        }
-    } );
+controls.forEach(control => {
+    control.addEventListener('click', handleUpdate);
 });
+
+function createDiv (columnLength) {
+
+    for (let i = 0; i<columnLength**2; i++) {
+        const squareDivLoop = document.createElement("div");
+
+        squareDivLoop.classList.add("squareDiv");
+        squareDivLoop.style.display = "flex";
+
+        squareDivLoop.style.width = `${sizeGrid/columnLength}px`;
+
+
+        squareDivLoop.addEventListener('mouseenter', () => {
+            if (squareDivLoop.classList.contains("colorme")){
+                //squareDiv.classList.remove("colorme");
+            }
+            else {
+                squareDivLoop.classList.add("colorme");
+            }
+        } );
+        document.querySelector(".gridContainer").appendChild(squareDivLoop);
+    };
+return console.log(columnLength**2 + " squareDiv created")    
+};
+
+function removeDiv() {
+    const squareDivs = document.querySelectorAll(".squareDiv");
+    squareDivs.forEach(squareDiv => squareDiv.remove());
+}
+
+createDiv (document.querySelector("#gridSize").value);
+
+
+

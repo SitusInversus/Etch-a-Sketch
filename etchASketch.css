@@ -1,16 +1,24 @@
 body {
     display: flex;
     justify-content: center;
-    background-color : grey;
+    background-color : yellow;
     border : 1px solid red;
+    flex-direction: column;
+}
+header {
+    text-align: center;
+    border: 1px solid red;
 }
 
-.containerGrid {
+.gridContainer {
+    width: 320px;
+    height: 320px;
     display : flex;
-    background-color : #7e8b003d;
-    box-sizing: border-box;
     flex-wrap:  wrap;
-    align-self: center;
+    align-content: stretch;
+    justify-content: stretch;
+    background-color: white;
+    margin: auto;
 }
 
 .squareDiv {
@@ -20,4 +28,9 @@ body {
 
 .colorme {
     background-color: black;
+}
+
+footer {
+    text-align:center;
+    border: 1px solid red;
 }
